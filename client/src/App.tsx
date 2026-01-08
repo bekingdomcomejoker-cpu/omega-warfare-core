@@ -13,6 +13,7 @@ const PayloadBuilder = lazy(() => import("@/pages/PayloadBuilder"));
 const Notifications = lazy(() => import("@/pages/Notifications"));
 const Search = lazy(() => import("@/pages/Search"));
 const PayloadTesting = lazy(() => import("@/pages/PayloadTesting"));
+const ThroneDashboard = lazy(() => import("@/pages/ThroneDashboard"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 // Loading fallback component
@@ -50,6 +51,9 @@ function Router() {
       </Route>
       <Route path={"/payload-testing"}>
         <PayloadTesting />
+      </Route>
+      <Route path={"/throne"}>
+        <ThroneDashboard />
       </Route>
       <Route path={"/404"}>
         <NotFound />

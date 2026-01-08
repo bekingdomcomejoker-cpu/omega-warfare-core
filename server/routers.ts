@@ -7,6 +7,7 @@ import { autonomousRouter } from "./routers-autonomous";
 import { discordOmegaRouter } from "./routers-discord-omega";
 import { merkabahRouter, koanRouter, multiServerRouter } from "./routers-integration";
 import { cerberusRouter, alphabetRouter, throneRouter } from "./routers-throne";
+import { rbacRouter, predictorRouter } from "./routers-advanced";
 
 export const appRouter = router({
   system: systemRouter,
@@ -42,6 +43,10 @@ export const appRouter = router({
   cerberus: cerberusRouter,
   alphabet: alphabetRouter,
   throne: throneRouter,
+
+  // Advanced Routers (RBAC, Payload Predictor)
+  rbac: rbacRouter,
+  predictor: predictorRouter,
 });
 
 export type AppRouter = typeof appRouter;
